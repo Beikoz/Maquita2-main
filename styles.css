@@ -1,0 +1,172 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  padding: 20px 40px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-container {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: rem;
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #00f535; /* Amarelo industrial */
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+  transition: all 0.3s ease;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #3ca06c;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  /* Imagem + overlay em degradê */
+  background: 
+    linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.2)),
+    url('/assets/main\ img.png') no-repeat center center/cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(000,000,000,0.8);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 50%;
+  margin-left: 10%;
+  z-index: 2;
+}
+
+.hero-content .subtitle {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #3ca06c;
+  margin-bottom: 20px;
+}
+
+.hero-content .description {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #3ca06c;
+  color: #111;
+  padding: 12px 28px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background: #04f87a;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero-content {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
