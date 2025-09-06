@@ -85,104 +85,75 @@ body {
 /* Hero */
 .hero {
   height: 100vh;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* alinha no início */
-  padding-left: 20%;           /* desloca 20% da tela */
-  position: relative;
-  overflow: hidden;
+  padding-left: 10%;
+  background: url('./assets/mainimg.png') center/cover no-repeat;
+  color: #fff;
 }
 
-.hero-content {
-  max-width: 90%;
-  z-index: 2;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 1.2s ease-in-out;
+  z-index: 0;
+  background-image: var(--img-a);
+  opacity: 1;
 }
 
-.btn-explore {
-  display: inline-block;
-  background: #3ca06c;
-  color: #000;
-  padding: 12px 25px;
-  border-radius: 4px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-  margin-top: 20px;
-}
-
-.btn-explore:hover {
-  background: #59f71b;
-}
-
-/* Duas camadas de fundo que vamos cruzar com opacidade */
-.hero::before,
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 1.2s ease-in-out;
   z-index: 0;
-  /* Gradiente + imagem (duas camadas no MESMO pseudo-elemento) */
-  background-image:
-    linear-gradient(to right,
-  rgba(0,0,0,0.9) 0%,
-  rgba(0,0,0,0.7) 70%,
-  rgba(0,0,0,0) 100%),
-    var(--img, url('./assets/mainimage.png')); /* valor padrão de segurança */
-  background-position: center center, center center;
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, cover;
-
-  /* Zoom só no fundo */
-  animation: zoomIn 12s infinite;
-  transform-origin: center center;
-
-  /* Fade */
   opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-  pointer-events: none;
-  will-change: opacity, transform;
+  background-image: var(--img-b);
 }
 
-/* Começa mostrando a camada A (::before) */
-.hero::before {
+.hero.fade::before {
+  opacity: 0;
+}
+
+.hero.fade::after {
   opacity: 1;
-  /* a var aplicada aqui vira --img-a, setada pelo JS */
-  --img: var(--img-a, url('./assets/mainimage.png'));
 }
 
-/* Camada B (::after) começa oculta */
-.hero::after {
-  opacity: 0;
-  /* a var aplicada aqui vira --img-b, setada pelo JS */
-  --img: var(--img-b, url('./assets/hero2.png'));
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%);
+  z-index: 1;
 }
 
-/* Classes para controlar o crossfade */
-.hero.show-a::before { opacity: 1; }
-.hero.show-a::after  { opacity: 0; }
-
-.hero.show-b::before { opacity: 0; }
-.hero.show-b::after  { opacity: 1; }
-
-/* Animação do zoom */
-@keyframes zoomIn {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.1); }
-  100% { transform: scale(1); }
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  color: #fff;
 }
+
 .hero-content .subtitle {
   font-size: 0.9rem;
   letter-spacing: 2px;
-  color: #ffffff;
+  color: #f2f2f2;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;;
-  font-weight: bold;
+  font-size: 3rem;
+  font-weight: 800;
   line-height: 1.2;
-  color: #3ca06c;
+  color: #3ca06c; /* verde estilo Metal Corte */
   margin-bottom: 20px;
 }
 
@@ -195,42 +166,23 @@ body {
 .cta-btn {
   display: inline-block;
   background: #3ca06c;
-  color: #111;
-  padding: 12px 28px;
+  color: #000;
+  padding: 14px 32px;
   text-decoration: none;
   font-weight: bold;
   border-radius: 4px;
-  transition: background 0.3s;
+  transition: 0.3s;
 }
 
 .cta-btn:hover {
-  background: #04f87a;
+  background: #3ca06c;
 }
 
 @media (max-width: 1024px) {
-  .hero-content {
-    max-width: 70%;
-    margin-left: 5%;
-  }
-
   .hero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .about-container {
-    gap: 30px;
-  }
-
-  .about-img img {
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .about-text h2 {
-    font-size: 32px;
+    font-size: 2.2rem;
   }
 }
-
 /* Celulares grandes */
 @media (max-width: 768px) {
   .nav-links {
