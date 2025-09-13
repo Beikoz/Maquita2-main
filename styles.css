@@ -519,94 +519,135 @@ body {
 .industry-item:hover img {
   transform: scale(1.08); /* efeito zoom no hover */
 }
-/* FOOTER */
+/* ====================== */
+/* FOOTER BASE            */
+/* ====================== */
 .footer {
-  background: #336d4f; /* verde estilo modelo */
-  color: #ffffff;
-  padding: 50px 20px 20px;
-  text-shadow: -3px 2px 3px rgba(0,0,0,0.85);
+  background: #1d1d1d; /* fundo escuro */
+  color: #eee;
+  padding: 60px 20px 20px 20px;
   font-family: Arial, sans-serif;
 }
 
 .footer-container {
-  max-width: 1200px;
-  margin: auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
 }
 
 .footer h2.logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.footer h2.logo span {
+  font-size: 26px;
+  margin-bottom: 10px;
   color: #3ca06c;
 }
 
-.footer h3 {
-  margin-bottom: 15px;
-  font-size: 18px;
-  font-weight: bold;
+.footer h2.logo span {
+  color: #fff;
 }
 
-.footer ul {
+.footer-col h3 {
+  color: #3ca06c;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* ====================== */
+/* SOCIAL ICONS           */
+/* ====================== */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: #3ca06c;
+  font-size: 20px;
+  transition: color .3s;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+/* ====================== */
+/* MENU LINKS             */
+/* ====================== */
+.footer-col ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer ul li {
-  margin-bottom: 8px;
+.footer-col ul li {
+  margin-bottom: 10px;
 }
 
-.footer ul li a {
-  color: #fff;
+.footer-col ul li a {
   text-decoration: none;
-  transition: 0.3s;
+  color: #eee;
+  transition: color .3s;
 }
 
-.footer ul li a:hover {
-  color: #ffd700;
+.footer-col ul li a:hover {
+  color: #3ca06c;
 }
 
-.social-icons a {
-  margin-right: 10px;
+/* ====================== */
+/* CONTATO                */
+/* ====================== */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.contact-list li i {
+  color: #3ca06c;
   font-size: 18px;
-  color: #fff;
-  text-decoration: none;
-  transition: 0.3s;
+  flex-shrink: 0;
 }
 
-.social-icons a:hover {
-  color: #ffd700;
+.contact-list strong {
+  color: #3ca06c;
+  margin-right: 5px;
 }
 
+/* ====================== */
+/* GALERIA                */
+/* ====================== */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
+  gap: 5px;
 }
 
 .gallery-grid img {
   width: 100%;
-  height: 80px;
-  object-fit: cover;
-  display: block;
   border-radius: 6px;
-  box-shadow: -3px 4px 5px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: -3px 4px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: -3px 4px 5px 0px rgba(0,0,0,0.75);
+  object-fit: cover;
+  height: 70px;
 }
 
+/* ====================== */
+/* MAP SECTION            */
+/* ====================== */
 .footer-map {
-  max-width: 800px;
-  margin: 40px auto;
   text-align: center;
 }
 
 .footer-map h3 {
+  color: #3ca06c;
   margin-bottom: 15px;
 }
 
@@ -615,27 +656,25 @@ body {
 }
 
 .map-btn a {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #27d179;
-  color: #fff;
-  text-shadow: -3px 2px 3px rgba(0, 0, 0, 0);
-  border-radius: 8px;
   text-decoration: none;
+  color: #3ca06c;
   font-weight: bold;
-  transition: 0.3s;
+  transition: color .3s;
 }
 
 .map-btn a:hover {
-  background: #3d9266;
+  color: #fff;
 }
 
+/* ====================== */
+/* COPYRIGHT              */
+/* ====================== */
 .footer-bottom {
   text-align: center;
-  margin-top: 30px;
-  border-top: 1px solid rgba(0,0,0,0.3);
-  padding-top: 15px;
+  padding-top: 20px;
+  border-top: 1px solid #3ca06c;
   font-size: 14px;
+  color: #aaa;
 }
 
 /* Responsivo */
@@ -654,4 +693,38 @@ body {
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+/*Contato no footer */
+.footer-col.contato h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #3ca06c;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #fff; /* ou #333 dependendo do seu footer */
+  line-height: 1.4;
+}
+
+.contact-list li i {
+  color: #3ca06c;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.contact-list strong {
+  color: #3ca06c;
+  font-weight: 600;
+  margin-right: 5px;
 }
