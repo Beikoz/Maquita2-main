@@ -375,6 +375,68 @@ body {
   background: #59f71b;
 }
 
+@media (max-width: 1024px) {
+  .about-container {
+    gap: 20px;
+  }
+
+  .about-img img {
+    width: 30rem; /* reduz a imagem em tablets */
+  }
+
+  .about-text h2 {
+    font-size: 32px;
+  }
+
+  .about-text p,
+  .about-text ul li {
+    font-size: 15px;
+  }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* empilha imagem e texto */
+    text-align: center;     /* centraliza o texto */
+  }
+
+  .about-img img {
+    width: 100%;
+    max-width: 25rem; /* garante que não estoure a tela */
+    margin: 0 auto;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .about-text p,
+  .about-text ul li {
+    font-size: 14px;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .about {
+    padding: 40px 5%; /* menos padding nas laterais */
+  }
+
+  .about-text h2 {
+    font-size: 24px;
+  }
+
+  .about-img img {
+    max-width: 20rem;
+  }
+
+  .btn-explore {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
 /* Section */
 .why-us {
   background: #111; /* fundo escuro */
