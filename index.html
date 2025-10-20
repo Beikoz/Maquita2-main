@@ -94,21 +94,12 @@
     </div>
   </section>
 
-  <section id="galeria" class="industry">
+  <section class="industry">
     <h2>ATUAMOS EM DIVERSOS SETORES</h2>
     <p>Nosso trabalho abrange indústrias de pequeno, médio e grande porte.</p>
     
-    <div class="industry-grid">
-      <div class="industry-item"><img src="assets/industry1.jpg" alt="Construção Civil"></div>
-      <div class="industry-item"><img src="assets/industry2.jpg" alt="Metalúrgica"></div>
-      <div class="industry-item"><img src="assets/industry3.jpg" alt="Automotiva"></div>
-      <div class="industry-item"><img src="assets/industry4.jpg" alt="Naval"></div>
-      <div class="industry-item"><img src="assets/industry5.jpg" alt="Energia"></div>
-      <div class="industry-item"><img src="assets/industry6.jpg" alt="Indústria Pesada"></div>
-      <div class="industry-item"><img src="assets/industry7.jpg" alt="Agronegócio"></div>
-      <div class="industry-item"><img src="assets/industry8.jpg" alt="Infraestrutura"></div>
-      <div class="industry-item"><img src="assets/industry9.jpg" alt="Projetos Especiais"></div>
-      <div class="industry-item"><img src="assets/industry10.jpg" alt="Outros Setores"></div>
+    <div class="galeria" id="galeria">
+      <!-- As imagens serão inseridas aqui via JavaScript -->
     </div>
   </section>
 
@@ -156,7 +147,7 @@
           </li>
           <li>
             <i class="fas fa-map-marker-alt"></i>
-            Rua Afonso Lopes Vieira, 1350 - São Paulo/SP
+            Rua Koshun Takara, 1350 - Jardim Peri, São Paulo - SP, 02671-110
           </li>
         </ul>
       </div>
@@ -171,6 +162,7 @@
           <img src="assets/industry4.jpg" alt="">
           <img src="assets/industry5.jpg" alt="">
           <img src="assets/industry6.jpg" alt="">
+
         </div>
       </div>
     </div>
@@ -179,12 +171,24 @@
     <div class="footer-map">
       <h3>Localização</h3>
       <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.355079191785!2d-46.6635648!3d-23.5544116!2m3!1f0!2f0!3f0!3m2!
-        1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c6d5f5f8b7%3A0x8e8e8e8e8e8e8e8e!2sRua%20Afonso%20Lopes%20Vieira%2C%201350%20-%20Vila%20Madalena%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005456-001!5e0!3m2!1spt-BR!2sbr!4v1616161616161!5m2!1spt-BR!2sbr" 
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1727.2562681653383!2d-46.660395062214626!3d-23.46303286634882!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef742a90be34f%3A0x2ce3e8cc0304f13e!2sMetal%20Corte%20Ind%C3%BAstria%20e%20Com%C3%A9rcio%20de%20Perfilados%20Ltda!5e0!3m2!1spt-BR!2sbr!4v1760979469013!5m2!1spt-BR!2sbr" 
         width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
-    <p class="footer-bottom">© 2024 MetalCorte. Todos os direitos reservados.</p>
+    <p class="footer-bottom">© 2025 MetalCorte. Todos os direitos reservados.</p>
   </footer>
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-conteudo">
+      <button class="lightbox-fechar" id="fechar">&times;</button>
+      <button class="lightbox-anterior" id="anterior">&lt;</button>
+      <img class="lightbox-imagem" id="imagemLightbox" src="" alt="">
+      <button class="lightbox-proxima" id="proxima">&gt;</button>
+      <div class="lightbox-info">
+        <span id="infoImagem"></span>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
