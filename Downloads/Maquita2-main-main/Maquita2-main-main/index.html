@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MetalCorte</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <div class="logo">
+        <svg width="340" height="100" viewBox="0 0 340 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <text x="-3" y="65" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#3ca06c">METAL</text>
+          <circle cx="170" cy="54" r="28" stroke="#3ca06c" stroke-width="4" fill="white"/>
+          <text x="158" y="55" font-family="Arial, sans-serif" font-size="18" fill="#3ca06c" font-weight="bold">M</text>
+          <text x="170" y="65" font-family="Arial, sans-serif" font-size="18" fill="#3ca06c" font-weight="bold">C</text>
+          <text x="207" y="65" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#3ca06c">CORTE</text>
+        </svg>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#" class="nav-link" data-target="#inicio">Início</a></li>
+          <li><a href="#" class="nav-link" data-target="#sobre">Sobre Nós</a></li>
+          <li><a href="#" class="nav-link" data-target="#galeria">Galeria</a></li>
+          <li><a href="#" class="nav-link" data-target="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="subtitle">Soluções em corte e dobra de metais</p>
+        <h1>TECNOLOGIA E PRECISÃO <br> EM CADA PROJETO</h1>
+        <p class="description">
+          Somos especialistas em corte e dobra de metais com equipamentos modernos e equipe qualificada para atender todo tipo de demanda industrial.
+        </p>
+        <button data-target="#sobre" class="cta-btn">EXPLORAR</button>
+      </div>
+    </section>
+  </main>
+
+  <section id="sobre" class="about">
+    <div class="about-container">
+      <!-- Imagem -->
+      <div class="about-img">
+        <img src="./assets/OIP.jpg" alt="Máquina de corte industrial">
+      </div>
+
+      <!-- Texto -->
+      <div class="about-text">
+        <h2>SOBRE NÓS</h2>
+        <p>
+          Há mais de 20 anos no mercado, a MetalCorte é referência em soluções de corte e dobra de metais,
+          atendendo desde pequenas empresas até grandes indústrias.
+        </p>
+        <ul>
+          <li><span>•</span> Equipamentos de Alta Precisão</li>
+          <li><span>•</span> Equipe Técnica Especializada</li>
+          <li><span>•</span> Compromisso com Prazos</li>
+          <li><span>•</span> Sustentabilidade em Nossos Processos</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" class="why-us">
+    <h2>POR QUE ESCOLHER A METALCORTE?</h2>
+    <p>Combinamos experiência, inovação e qualidade para entregar resultados impecáveis.</p>
+    
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🏆</div>
+        <h3>Referência no Mercado</h3>
+        <p>Atendemos centenas de clientes com soluções sob medida para cada projeto.</p>
+      </div>
+      
+      <div class="card highlight">
+        <div class="icon">⚙️</div>
+        <h3>Qualidade Garantida</h3>
+        <p>Máquinas modernas e processos certificados para máxima precisão.</p>
+      </div>
+      
+      <div class="card">
+        <div class="icon">💲</div>
+        <h3>Ótimo Custo-Benefício</h3>
+        <p>Preços competitivos sem abrir mão da qualidade e do atendimento.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="industry">
+    <h2>ATUAMOS EM DIVERSOS SETORES</h2>
+    <p>Nosso trabalho abrange indústrias de pequeno, médio e grande porte.</p>
+    
+    <div class="galeria" id="galeria">
+      <!-- As imagens serão inseridas aqui via JavaScript -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Logo + Texto -->
+      <div class="footer-col">
+        <h2 class="logo">METAL<span>CORTE</span></h2>
+        <p>Excelência em corte e dobra de metais para atender às necessidades da sua empresa com qualidade e pontualidade.</p>
+        <div class="social-icons">
+        </div>
+      </div>
+
+      <!-- Links -->
+      <div class="footer-col" id="contato">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Sobre Nós</a></li>
+          <li><a href="#">Galeria</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Contato -->
+      <div class="footer-col contato">
+        <h3>Contato</h3>
+        <ul class="contact-list">
+          <li>
+            <i class="fas fa-phone"></i>
+            <strong>Tels.:</strong> (11) 3851-4970 / 3859-5907
+          </li>
+          <li>
+            <i class="fas fa-mobile-alt"></i>
+            <strong>Vendas:</strong> (11) 94701-2894 / 96060-9544
+          </li>
+          <li>
+            <i class="fas fa-wallet"></i>
+            <strong>Financeiro:</strong> (11) 94746-2607
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <strong>Email:</strong> contato@metalcorteedobra.com.br
+          </li>
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            Rua Koshun Takara, 1350 - Jardim Peri, São Paulo - SP, 02671-110
+          </li>
+        </ul>
+      </div>
+
+      <!-- Galeria -->
+      <div class="footer-col gallery">
+        <h3>Galeria</h3>
+        <div class="gallery-grid gallery-grid-footer">
+        <div class="gallery-item"><img src="assets/industry1.jpg" alt=""></div>
+        <div class="gallery-item"><img src="assets/industry2.jpg" alt=""></div>
+        <div class="gallery-item"><img src="assets/industry3.jpg" alt=""></div>
+        <div class="gallery-item"><img src="assets/industry4.jpg" alt=""></div>
+        <div class="gallery-item"><img src="assets/industry5.jpg" alt=""></div>
+        <div class="gallery-item"><img src="assets/industry6.jpg" alt=""></div>
+        <div class="gallery-item"><img src="assets/industry7.jpg" alt=""></div>
+        <div class="gallery-item"><img src="assets/industry8.jpg" alt=""></div>
+        <div class="gallery-item"><img src="assets/industry10.jpg" alt=""></div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Localização -->
+    <div class="footer-map">
+      <h3>Localização</h3>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1727.2562681653383!2d-46.660395062214626!3d-23.46303286634882!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef742a90be34f%3A0x2ce3e8cc0304f13e!2sMetal%20Corte%20Ind%C3%BAstria%20e%20Com%C3%A9rcio%20de%20Perfilados%20Ltda!5e0!3m2!1spt-BR!2sbr!4v1760979469013!5m2!1spt-BR!2sbr" 
+        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <p class="footer-bottom">© 2025 MetalCorte. Todos os direitos reservados.</p>
+  </footer>
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-conteudo">
+      <button class="lightbox-fechar" id="fechar">&times;</button>
+      <button class="lightbox-anterior" id="anterior">&lt;</button>
+      <img class="lightbox-imagem" id="imagemLightbox" src="" alt="">
+      <button class="lightbox-proxima" id="proxima">&gt;</button>
+      <div class="lightbox-info">
+        <span id="infoImagem"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
